@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body {margin: 0}
+canvas {
+    background-color: #000;
+    max-width: 100%;
+}
+</style>
+</head>
+<body>
+<button type="button" style="float: right" onclick="document.getElementById('preview').src=imgClip2.getPreview()">获取截图</button>
+<div id="rs"></div>
+<img src="" id="preview"/>
+
+<div id="a" style="position:absolute; top:100px; left:0; width:400px; height:400px;"></div>
+
+<div id="b" style="position:absolute; top:100px; left:700px; width:600px; height:400px;"></div>
+
+
+
+<script src="../index.js"></script>
+<script>
+var imgClip = new CanvasImageCropper({
+    canvasWidth: 500,
+    canvasHeight: 500,
+    maskStyle: 'rgba(0, 0, 0, .6)',
+    clipWidth: 200,
+    clipHeight: 200
+});
+imgClip.render(document.getElementById('a'), './foo.jpg');
+
+var rs = document.getElementById('rs');
+imgClip.onChange = function(d) {
+    rs.innerHTML = 'x: ' + d.x
+        + '<br />y: ' + d.y
+        + '<br />w: ' + d.w
+        + '<br />h: ' + d.h
+}
+
+
+
+var imgClip2 = new CanvasImageCropper({
+    canvasWidth: 600,
+    canvasHeight: 400,
+    maskStyle: 'rgba(0, 128, 0, .4)',
+    clipWidth: 200,
+    clipHeight: 200
+});
+imgClip2.render(document.getElementById('b'), './bar.jpg');
+</script>
+</body>
+</html>
