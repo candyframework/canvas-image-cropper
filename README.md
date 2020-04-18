@@ -2,8 +2,13 @@
 
 JavaScript image cropper based on canvas
 
+![preview](./demo/preview.png)
+
 # 安装
 
+```
+npm install canvas-image-cropper
+```
 
 
 # 使用
