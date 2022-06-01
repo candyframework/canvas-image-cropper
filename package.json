@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/douyu-beijing/canvas-image-cropper.git"
+    "url": "git+https://github.com/candyframework/canvas-image-cropper.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/douyu-beijing/canvas-image-cropper/issues"
+    "url": "https://github.com/candyframework/canvas-image-cropper/issues"
   },
-  "homepage": "https://github.com/douyu-beijing/canvas-image-cropper#readme",
+  "homepage": "https://github.com/candyframework/canvas-image-cropper#readme",
   "devDependencies": {
     "rollup": "^2.6.1"
   }
